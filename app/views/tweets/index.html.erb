@@ -1,0 +1,7 @@
+<h1><%= @zombie.name %>'s tweets</h1>
+
+<% @zombie.tweets.each do |t| %>
+    <b><%= t.topic %></b><br>
+    <%= t.text %>
+    <br>
+<% end %>

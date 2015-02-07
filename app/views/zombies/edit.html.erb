@@ -1,0 +1,19 @@
+<h1>Editing Zombie</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @zombie %> |
+<%= link_to 'Back', zombies_path %>
+
+<br><br>
+
+<%= form_for @zombie do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+    <%= f.label :bio %><br>
+    <%= f.text_area :bio %><br>
+    <%= f.label :rotting %>
+    <%= f.check_box :rotting %><br>
+    <%= f.range_field :age %>
+    <%= f.submit %>
+<% end %>
